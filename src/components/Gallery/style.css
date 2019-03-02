@@ -1,0 +1,44 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery .gallery-item {
+  position: relative;
+  margin: 2px;
+  width: 150px;
+  overflow: hidden;
+}
+
+.gallery .gallery-item .note {
+  font-size: 0.87em;
+}
+
+.gallery .gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #80808075;
+}
+
+.gallery .gallery-item:hover .overlay {
+  opacity: 0.6;
+}
+
+.gallery .gallery-item .overlay .info-icon {
+  height: 25px;
+  width: 25px;
+  margin-top: 3px;
+  float: right;
+  background-image: url(../../img/info.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
