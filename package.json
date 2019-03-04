@@ -2,9 +2,11 @@
   "name": "alpha-bank-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sukserhiy.github.io/alpha-bank-test/",
   "dependencies": {
     "element-react": "1.4.32",
     "element-theme-default": "^1.4.13",
+    "gh-pages": "^2.0.1",
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.3.1",
     "prop-types": "^15.7.2",
@@ -23,6 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
