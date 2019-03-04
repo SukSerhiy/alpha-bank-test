@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/alpha-bank-test/precache-manifest.e9500e2deea40b1b8e29df9b5930ab12.js"
+  "/alpha-bank-test/precache-manifest.96b0c7816c13c0fc160a46d61ad8c885.js"
 );
 
 workbox.clientsClaim();

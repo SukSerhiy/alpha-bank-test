@@ -1,16 +1,16 @@
 {
-  "main.css": "/alpha-bank-test/static/css/main.c89e8f55.chunk.css",
-  "main.js": "/alpha-bank-test/static/js/main.963a31c1.chunk.js",
-  "main.js.map": "/alpha-bank-test/static/js/main.963a31c1.chunk.js.map",
+  "main.css": "/alpha-bank-test/static/css/main.5e2b850e.chunk.css",
+  "main.js": "/alpha-bank-test/static/js/main.fc5958d8.chunk.js",
+  "main.js.map": "/alpha-bank-test/static/js/main.fc5958d8.chunk.js.map",
   "runtime~main.js": "/alpha-bank-test/static/js/runtime~main.2131b022.js",
   "runtime~main.js.map": "/alpha-bank-test/static/js/runtime~main.2131b022.js.map",
   "static/css/2.5e74e6be.chunk.css": "/alpha-bank-test/static/css/2.5e74e6be.chunk.css",
-  "static/js/2.1d917878.chunk.js": "/alpha-bank-test/static/js/2.1d917878.chunk.js",
-  "static/js/2.1d917878.chunk.js.map": "/alpha-bank-test/static/js/2.1d917878.chunk.js.map",
+  "static/js/2.3f4c86e9.chunk.js": "/alpha-bank-test/static/js/2.3f4c86e9.chunk.js",
+  "static/js/2.3f4c86e9.chunk.js.map": "/alpha-bank-test/static/js/2.3f4c86e9.chunk.js.map",
   "index.html": "/alpha-bank-test/index.html",
-  "precache-manifest.e9500e2deea40b1b8e29df9b5930ab12.js": "/alpha-bank-test/precache-manifest.e9500e2deea40b1b8e29df9b5930ab12.js",
+  "precache-manifest.96b0c7816c13c0fc160a46d61ad8c885.js": "/alpha-bank-test/precache-manifest.96b0c7816c13c0fc160a46d61ad8c885.js",
   "service-worker.js": "/alpha-bank-test/service-worker.js",
   "static/css/2.5e74e6be.chunk.css.map": "/alpha-bank-test/static/css/2.5e74e6be.chunk.css.map",
-  "static/css/main.c89e8f55.chunk.css.map": "/alpha-bank-test/static/css/main.c89e8f55.chunk.css.map",
+  "static/css/main.5e2b850e.chunk.css.map": "/alpha-bank-test/static/css/main.5e2b850e.chunk.css.map",
   "static/media/index.css": "/alpha-bank-test/static/media/element-icons.d2f69a92.woff"
 }
