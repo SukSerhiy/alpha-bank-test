@@ -22,15 +22,14 @@ class Controls extends Component {
 
   render() {
     return (
-      <div className='filter'>
-        <AsyncSelect 
-          placeholder='Album'
-          loadOptions={this.loadOptions}
-          onChange={this.onChange}
-          isClearable
-          defaultOptions
-        />
-      </div>)
+      <AsyncSelect 
+        placeholder='Type album here...'
+        loadOptions={this.loadOptions}
+        onChange={this.onChange}
+        isClearable
+        defaultOption
+      />
+    )
   }
 }
 
