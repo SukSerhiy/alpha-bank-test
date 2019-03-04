@@ -1,11 +1,13 @@
-import Immutable, { List } from 'immutable';
-import { SET_PHOTOS } from '../actionTypes';
+import { List } from 'immutable';
+import { SET_PHOTOS, SET_MORE_PHOTOS } from '../actionTypes';
 
 export default (state = List([]), action) => {
+  const photos = action.payload || [];
   switch (action.type) {
     case SET_PHOTOS:
-    const photos = action.payload;
-      return Immutable.fromJS(photos);
+      return List(photos);
+    case SET_MORE_PHOTOS:
+      return state.concat(List(photos));
     default:
       return state;
   }

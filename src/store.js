@@ -5,7 +5,10 @@ import rootReducer from './reducers/rootReducer';
 import Immutable from 'immutable';
 
 const initState = Immutable.fromJS({
-  photos: []
+  photos: [],
+  page: 1,
+  albumId: null,
+  searchStr: null,
 });
 
 export default function configureStore(initialState = initState) {

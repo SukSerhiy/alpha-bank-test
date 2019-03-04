@@ -1,10 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import $ from 'jquery';
 import { getAlbumById } from '../../api/photos';
 import './style.css';
 
-const TIME_OF_HIDING = 1000;
+const TIME_OF_HIDING = 2000;
 
 const renerInfoRow = (title, text) => (
   <div>
@@ -22,20 +20,22 @@ class PhotoInfoAlert extends Component {
   };
 
   show = async (photoInfo) => {
+    clearTimeout(this.timerId);
     const { albumId } = photoInfo;
     const album = await getAlbumById(albumId);
     this.setState({
       photoInfo: { ...photoInfo, album: album.title },
       isShowed: true
     });
-    this.timerId = setTimeout(this.hide, TIME_OF_HIDING);
   }
 
   hide = () => {
-    this.setState({
-      photoInfo: null,
-      isShowed: false
-    });
+    this.timerId = setTimeout(() => {
+      this.setState({
+        photoInfo: null,
+        isShowed: false
+      })
+    }, TIME_OF_HIDING);
   }
 
   componentWillUnmount() {

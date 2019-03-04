@@ -2,34 +2,44 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Item from '../Item';
 import PhotoInfoAlert from '../PhotoInfoAlert';
+import LoadMore from '../LoadMore';
 import './style.css';
 
 class Gallery extends Component {
+  static propTypes = {
+    photos: PropTypes.array,
+    loadMorePhotos: PropTypes.func
+  };
+
   constructor(props) {
     super(props);
     this.photoInfoRef = React.createRef();
   }
 
-  onShowInfo = (photoInfo) => {
+  showInfo = (photoInfo) => {
     this.photoInfoRef.current.show(photoInfo);
   }
 
+  hideInfo = () => {
+    this.photoInfoRef.current.hide();
+  }
+
   render() {
-    const { photos } = this.props;
+    const { photos, loadMorePhotos } = this.props;
     return (<div className='gallery'>
-      {photos.map((photo, key) => (
+    <div className='gallery-items'>
+        {photos.map((photo, key) => (
         <Item 
-          key={key} 
-          onShowInfo={this.onShowInfo} 
-          item={photo} 
-        />))}
+            key={key} 
+            showInfo={this.showInfo} 
+            hideInfo={this.hideInfo}
+            item={photo} 
+          />))}
+        </div>
       <PhotoInfoAlert ref={this.photoInfoRef} />
+      <LoadMore loadData={loadMorePhotos} />
     </div>)
   }
 }
-
-Gallery.propTypes = {
-  photos: PropTypes.array
-};
 
 export default Gallery;

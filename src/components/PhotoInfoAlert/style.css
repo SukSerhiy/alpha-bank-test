@@ -1,5 +1,6 @@
 #photo-info-alert {
   top: 5px;
-  background-color: #80808075;
+  background-color: #808080c7;
+  color: white;
   position: fixed;
 }

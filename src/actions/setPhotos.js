@@ -1,4 +1,4 @@
-import { SET_PHOTOS } from '../../actionTypes'
+import { SET_PHOTOS } from '../actionTypes'
 
 const setPhotos = payload => dispatch => {
   dispatch({

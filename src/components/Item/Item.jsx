@@ -1,24 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Item = props => {
-  const { item: { title, thumbnailUrl, url, albumId } } = props;
+  const { item: { title, thumbnailUrl } } = props;
 
-  const _onShowInfo = () => {
-    const { item, onShowInfo } = props;
-    onShowInfo(item);
+  const _onMouseDown = () => {
+    const { item, showInfo } = props;
+    showInfo(item);
+  }
+
+  const _onMouseLeave = () => {
+    const { hideInfo } = props;
+    hideInfo();
   }
 
   return (
     <div className='gallery-item'>
-      <img src={thumbnailUrl}></img>
+      <img alt={title} src={thumbnailUrl}></img>
       <div className='note'>
         <span>{title}</span>
       </div>
-      <div class='overlay'>
+      <div className='overlay'>
         <div 
           className='info-icon' 
-          onClick={_onShowInfo}>
+          onMouseDown={_onMouseDown}
+          onMouseLeave={_onMouseLeave}
+        >
         </div>
       </div>
     </div>
@@ -26,11 +33,15 @@ const Item = props => {
 }
 
 Item.propTypes = {
-  albumId: PropTypes.string,
-  id: PropTypes.string,
-  title: PropTypes.string,
-  url: PropTypes.string,
-  thumbnailUrl: PropTypes.string
+  item: PropTypes.shape({
+    albumId: PropTypes.number,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    url: PropTypes.string,
+    thumbnailUrl: PropTypes.string
+  }),
+  showInfo: PropTypes.func,
+  hideInfo: PropTypes.func
 };
 
 export default Item;
